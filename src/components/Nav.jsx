@@ -1,8 +1,8 @@
-import {useEffect, useState} from "react";
-import {NavLink} from "react-router-dom";
+// import {useEffect, useState} from "react";
+import {Link, NavLink} from "react-router-dom";
 
 const Nav = () => {
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
   const navLink = (
     <>
       {" "}
@@ -10,7 +10,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#7462E1]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/"
@@ -22,7 +22,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#7462E1]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/about"
@@ -34,7 +34,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#7462E1]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/skills"
@@ -46,7 +46,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#7462E1]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/services"
@@ -58,7 +58,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#554B99]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/portfolio"
@@ -70,7 +70,7 @@ const Nav = () => {
         <NavLink
           className={({isActive}) =>
             isActive
-              ? "text-lg font-semibold px-5 py-3 text-[#554B99]  underline"
+              ? "text-lg font-semibold px-5 py-3 text-[#0DFFD7]  underline"
               : "text-lg font-semibold "
           }
           to="/contact"
@@ -81,19 +81,19 @@ const Nav = () => {
     </>
   );
 
-  const handleTheme = (e) => {
-    if (e.target.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  // const handleTheme = (e) => {
+  //   if (e.target.checked) {
+  //     setTheme("dark");
+  //   } else {
+  //     setTheme("light");
+  //   }
+  // };
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+  // useEffect(() => {
+  //   localStorage.setItem("theme", theme);
+  //   const localTheme = localStorage.getItem("theme");
+  //   document.querySelector("html").setAttribute("data-theme", localTheme);
+  // }, [theme]);
 
   return (
     <div className="navbar bg-base-100  fixed z-10 lg:px-52">
@@ -122,7 +122,7 @@ const Nav = () => {
             {navLink}
           </ul>
         </div>
-        <a className=" text-3xl font-bold font-Roboto  text-[#7462E1] dark:text-teal-50">
+        <a className=" text-3xl font-bold font-Playwrite text-[#0DFFD7]">
           Shahjalal
         </a>
       </div>
@@ -130,11 +130,13 @@ const Nav = () => {
         <ul className="menu menu-horizontal items-center px-1">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <a className=" btn bg-[#7462E1] font-Poppins text-lg text-white border-none">
-          Hire Me
-        </a>
+        <Link to="contact">
+          <button className=" btn hover:text-[#0DFFD7] bg-[#0DFFD7] font-Poppins text-lg text-[#000000] border-none">
+            Hire Me
+          </button>
+        </Link>
       </div>
-      <label className="grid cursor-pointer place-items-center ml-5">
+      {/* <label className="grid cursor-pointer place-items-center ml-5">
         <input
           type="checkbox"
           onChange={handleTheme}
@@ -170,7 +172,7 @@ const Nav = () => {
         >
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
-      </label>
+      </label> */}
     </div>
   );
 };

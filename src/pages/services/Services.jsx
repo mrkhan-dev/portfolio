@@ -1,13 +1,21 @@
 import frontendIcon from "../../assets/icon/web-design.png";
 import backendIcon from "../../assets/icon/backend.png";
 import databaseIcon from "../../assets/icon/database-management.png";
+import {useEffect} from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Services = () => {
+  useEffect(() => {
+    AOS.init({duration: 1000});
+    AOS.refresh();
+  }, []);
+
   return (
-    <div>
-      <div>
+    <div className="px-4 lg:px-0">
+      <div data-aos="fade-up">
         <h2 className="text-center font-semibold text-4xl mb-8">Services</h2>
-        <div className="flex justify-center gap-4 items-center">
-          <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="lg:flex lg:flex-row flex-col justify-center lg:gap-4 items-center">
+          <div className="card bg-base-100 lg:w-96 shadow-xl border">
             <figure>
               <img className="h-30 w-28" src={frontendIcon} alt="Shoes" />
             </figure>
@@ -21,7 +29,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="card bg-base-100 w-96 shadow-xl">
+          <div className="card bg-base-100 lg:w-96 shadow-xl border mt-4 lg:mt-0">
             <figure>
               <img className="h-30 w-28" src={backendIcon} alt="Shoes" />
             </figure>
@@ -35,7 +43,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="card bg-base-100 w-96 shadow-xl">
+          <div className="card bg-base-100 lg:w-96 border shadow-xl mt-4 lg:mt-0">
             <figure>
               <img className="h-30 w-28" src={databaseIcon} alt="Shoes" />
             </figure>

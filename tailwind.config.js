@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         Poppins: "'Poppins', sans-serf",
         Roboto: "'Roboto' sans-serif",
+        Playwrite: "'Playwrite FR Trad', cursive",
       },
     },
   },

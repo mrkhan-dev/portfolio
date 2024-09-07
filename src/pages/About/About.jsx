@@ -1,27 +1,34 @@
-import github from "../../assets/icon/github.png";
 import linkedin from "../../assets/icon/5296501_linkedin_network_linkedin logo_icon.png";
 import facebook from "../../assets/icon/facebook.png";
 import instagram from "../../assets/icon/instagram.png";
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({duration: 1000});
+    AOS.refresh();
+  }, []);
   return (
-    <div>
+    <div data-aos="fade-up" className="px-4 lg:px-0">
       <h3 className="text-center text-4xl font-Roboto mt-8 font-semibold">
-        About <span className="text-[#7462E1]">Me</span>
+        AboutMe
       </h3>
-      <div className="flex mt-8 max-w-[1416px] mx-auto">
-        <div className="w-1/2">
+      <div className="lg:flex lg:flex-row flex-col mt-8 lg:max-w-[1416px] mx-auto">
+        <div className="lg:w-1/2">
           <img
             className="rounded-xl"
             src="https://i.ibb.co/DKsqBNC/pen-near-notebook-camera-eyeglasses-keyboard-23-2148037061.jpg"
             alt=""
           />
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <p className=" font-Poppins text-lg">
             Hello! I am Shahjalal, a passionate{" "}
-            <span className="text-[#7462E1] font-semibold">
+            <span className="text-[#0DFFD7] font-semibold">
               front-end web developer{" "}
             </span>
             specializing in React.js. I have a strong background in creating
@@ -40,7 +47,11 @@ const About = () => {
           </p>
           <div className="flex gap-4 mt-4">
             <Link to="https://github.com/mrkhan-dev" target="blank">
-              <img className="w-8 h-8" src={github} alt="github" />
+              <img
+                className="w-8 h-8"
+                src="https://skillicons.dev/icons?i=github"
+                alt="github"
+              />
             </Link>
             <Link to="https://www.linkedin.com/in/md-shahjalal2" target="blank">
               <img className="w-8 h-8" src={linkedin} alt="linkedin" />
