@@ -38,19 +38,13 @@ const Banner = () => {
             into reality!
           </p>
           <a href="/download.pdf" download>
-            <button className="btn bg-[#0DFFD7] font-Poppins text-lg text-[#000000] border-none mt-4">
+            <button className="btn bg-[#0DFFD7] font-Poppins text-lg text-[#000000] hover:text-[#0DFFD7] border-none mt-4">
               Download Resume
             </button>
           </a>
         </div>
-        <div className="lg:h-96 lg:w-96 rounded-t-full rounded-br-xl lg:bg-[#2A323C]">
-          <div>
-            <img
-              className="lg:absolute  lg:h-[500px] lg:lg:ml-[-190px] lg:mt-[-117px]"
-              src={dev1}
-              alt=""
-            />
-          </div>
+        <div className="lg:h-[400px] z-0 border-[#0DFFD7] border-x-0 flex justify-center items-center lg:w-[400px] rounded-full border">
+          <img className="rounded-full" src={dev1} alt="" />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import facebook from "../../assets/icon/facebook.png";
 import instagram from "../../assets/icon/instagram.png";
 import {Link} from "react-router-dom";
 import {useEffect} from "react";
+import dev2 from "../../assets/dev2.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,18 +15,14 @@ const About = () => {
   }, []);
   return (
     <div data-aos="fade-up" className="px-4 lg:px-0">
-      <h3 className="text-center text-4xl font-Roboto mt-8 font-semibold">
-        AboutMe
-      </h3>
-      <div className="lg:flex lg:flex-row flex-col mt-8 lg:max-w-[1416px] mx-auto">
+      <div className="lg:flex lg:flex-row flex-col items-end gap-4 mt-8 lg:max-w-[1416px] mx-auto">
         <div className="lg:w-1/2">
-          <img
-            className="rounded-xl"
-            src="https://i.ibb.co/DKsqBNC/pen-near-notebook-camera-eyeglasses-keyboard-23-2148037061.jpg"
-            alt=""
-          />
+          <img className="rounded-xl h-96 w-full" src={dev2} alt="" />
         </div>
-        <div className="lg:w-1/2">
+        <div className="w-full">
+          <h3 className="text-left mb-6 text-4xl font-Roboto mt-8 font-semibold">
+            AboutMe
+          </h3>
           <p className=" font-Poppins text-lg">
             Hello! I am Shahjalal, a passionate{" "}
             <span className="text-[#0DFFD7] font-semibold">
